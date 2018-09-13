@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~normalize.css/normalize.css';
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('./fonts/Proxima/ProximaNova-Reg.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'proxima-extrabold';
+    src: url('./fonts/Proxima/ProximaNova-Extrabold.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'proxima-bold';
+    src: url('./fonts/Proxima/ProximaNova-Bold.otf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-size: 62.5%;
+}

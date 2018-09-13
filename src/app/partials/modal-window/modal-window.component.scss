@@ -1,0 +1,99 @@
+.modal-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    .modal-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.5;
+        visibility: visible;
+        z-index: 1;
+    }
+    .modal-container {
+        display: table-cell;
+        vertical-align: middle;
+        z-index: 2;
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        top: calc(50% - 248px);
+        left: calc(50% - 180px);
+        margin: auto;
+        @media(max-width: 550px) {
+            left: auto;
+        }
+        .modal {
+            background: white;
+            max-width: 600px;
+            max-height: 600px;
+            box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+            margin: auto;
+            display: block;
+            border-radius: 4px;
+            will-change: transform;
+            transform: translateY(0px);
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.8s cubic-bezier(0.13, 1.3, 0.71, 0.89);
+            .modal-body {
+                display: block;
+                padding: 10rem 3rem;
+                h4 {
+                    font-size: 1.5rem;
+                    margin: 0;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-weight: 300;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                .emailForm {
+                    .group {
+                        position: relative;
+                        margin-bottom: 3em;
+                    }
+                    input {
+                        font-size: 18px;
+                        padding: 0.625em 0.625em 0.625em 0.3125em;
+                        display: block;
+                        width: 100%;
+                        border: none;
+                        border-bottom: 1px solid #757575;
+                    }
+                    input:focus {
+                        outline: none;
+                    }
+                    .submit {
+                        border: none;
+                        background-color: #59D8D1;
+                        margin: 1rem auto;
+                        padding: 5px;
+                        border-radius: 5px;
+                        color: #ffffff;
+                        transition: .3s;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: rgba(89, 216, 209, 0.7);
+                        }
+                    }
+                }
+                button.close {
+                    border: none;
+                    position: absolute;
+                    top: 0.5rem;
+                    right: 0.5rem;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,90 @@
+$primary-color: #59D8D1;
+$font-color: #9e9e9e;
+$border-color: #ddd;
+.container {
+    width: 100%;
+    margin: .5rem auto;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 10px;
+    text-align: center;
+    color: #ccc;
+    b {
+        color: $primary-color;
+    }
+}
+
+.form-item {
+    position: relative;
+    input {
+        &[type="text"] {
+            display: block;
+            width: 100%;
+            height: 34px;
+            font-size: 14px;
+            line-height: 1.4;
+            color: $font-color;
+            background-color: transparent;
+            background-image: none;
+            border: none;
+            border-bottom: 2px solid $border-color;
+            padding: 6px 12px 6px 0;
+            &:focus,
+            &:active {
+                outline: none;
+                box-shadow: none;
+                color: $primary-color;
+            }
+            &:focus {
+                ~label {
+                    &:before {
+                        font-size: 12px;
+                        bottom: 34px;
+                        color: $primary-color;
+                    }
+                    &:after {
+                        background-repeat: no-repeat;
+                        background-size: 1000% 1000%;
+                        background-image: radial-gradient(circle, $primary-color 10%, rgba(0, 0, 0, 0) 11%) !important;
+                    }
+                }
+            }
+            &:not(:placeholder-shown) {
+                ~label {
+                    &:before {
+                        font-size: 12px;
+                        bottom: 34px;
+                    }
+                }
+            }
+        }
+    }
+    label {
+        &:before {
+            content: attr(data-label);
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 6px;
+            transition: all .15s ease-in-out;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            display: inline-flex;
+            text-decoration: none;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transition: all 0.4s ease-in-out;
+            background-position: 50%;
+            background-size: 200% 200%;
+        }
+    }
+}

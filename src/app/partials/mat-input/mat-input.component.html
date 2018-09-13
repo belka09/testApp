@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="form-item">
+      <input
+        type="text"
+        id="example"
+        placeholder="currency"
+        [restrict]="'[^0-9]'"
+        [ngModel]="testPrice | currency:'USD':'symbol':'2.2'"
+        (ngModelChange)="currencyChange.next($event)"
+      >
+  </div>
+</div>

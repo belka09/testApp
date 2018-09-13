@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<div [@routerAnimation]="getRouteAnimation(route)">
+  <router-outlet #route="outlet"></router-outlet>
+</div>
+
+<app-body></app-body>
+
+<app-modal-window *ngIf="modalService.showModal"></app-modal-window>

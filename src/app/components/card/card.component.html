@@ -1,0 +1,36 @@
+<div class="slicing-app-card__wrapper">
+  <div class="slicing-app-card__header">
+    <p class="slicing-app-card__header--title">Barclay card CashForward World MasterCard</p>
+    <div class="slicing-app-card__header--rate">
+      <app-stars></app-stars>
+      <span>3,252 Reviews</span>
+    </div>
+  </div>
+  <div class="slicing-app-card__body">
+    <div class="slicing-app-card__body--image">
+      <div class="slicing-app-card__image">
+        <img class="slicing-app-card__image--url" src="./../../assets/images/S0YdH7.tif.png" alt="">
+        <div class="slicing-app-card__image--info">
+          <p class="slicing-app-card__image--text">Approval Odds</p>
+          <app-button form="round">Very Good</app-button>
+        </div>
+      </div>
+    </div>
+    <div class="slicing-app-card__body--info">
+      <ul>
+        <li>Get a $100 cash rewards bonus after you spend $500 in purchases in the first 90 days after account oppening.</li>
+        <li>Earn unlimited 1.5% cash rewards on every purcahse.</li>
+        <li>Earn unlimited 1.5% cash rewards on every
+          <span (click)="openModal()">...show more</span>
+        </li>
+        <div *ngIf="openFormWindow" [@slideIn]=element class="slicing-app-card__body--info-form">
+          <app-mat-input (valChange)="saveValue($event)"></app-mat-input>
+        </div>
+      </ul>
+    </div>
+  </div>
+  <app-button form="block" (click)="openForm()">Apply now</app-button>
+  <app-card-footer>
+    See Details Rates & Fees
+  </app-card-footer>
+</div>

@@ -1,0 +1,139 @@
+.slicing-app-card {
+    &__wrapper {
+        display: flex;
+        width: calc(100% - 140px);
+        margin: 0 auto;
+        flex-direction: column;
+        animation: fadein 3s;
+        -moz-animation: fadein 3s;
+        -webkit-animation: fadein 3s;
+        -o-animation: fadein 3s;
+        @media(max-width: 1000px) {
+            width: 100%;
+            padding: 0 15px;
+        }
+    }
+    &__header {
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-between;
+        @media(max-width: 350px) {
+            margin-top: 15px;
+        }
+        &--title {
+            font-family: proxima-nova;
+            font-size: 20px;
+            margin: 0;
+            @media(max-width: 450px) {
+                font-size: 17px;
+            }
+        }
+        &--rate {
+            display: flex;
+            @media(max-width: 750px) {
+                display: none;
+            }
+            app-stars {
+                display: flex;
+                margin: 0;
+                margin-right: 12px;
+            }
+            span {
+                margin: 0;
+                font-family: proxima-nova;
+                font-size: 15px;
+            }
+        }
+    }
+    &__body {
+        display: flex;
+        margin: 0;
+        margin-top: 20px;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        @media(max-width: 750px) {
+            flex-direction: column;
+        }
+        &--image {
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+            margin-bottom: 25px;
+            .slicing-app-card__image {
+                display: flex;
+                &--url {
+                    height: 95px;
+                    margin-right: 18px;
+                }
+                &--text {
+                    font-family: proxima-nova;
+                    font-size: 15px;
+                    text-align: center;
+                }
+            }
+        }
+        &--info {
+            flex: 1;
+            ul {
+                max-width: 545px;
+                margin: 0;
+                @media(max-width: 750px) {
+                    max-width: 100%;
+                    padding: 0 15px;
+                }
+                li {
+                    font-family: proxima-nova;
+                    font-size: 18px;
+                    line-height: 1.7;
+                    span {
+                        color: #1194f6;
+                        cursor: pointer;
+                    }
+                    @media(max-width: 1000px) {
+                        line-height: 1.2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// css animation
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,36 @@
+.slicing-app-button {
+    &__wrapper {
+        cursor: pointer;
+        opacity: 1;
+        transition: .3s;
+        &--name {
+            font-family: proxima-bold;
+            font-size: 15px;
+            color: #ffffff;
+        }
+    }
+    &__wrapper.round {
+        border-radius: 20px;
+        background-color: #59D8D1;
+        padding: 1px 0;
+        text-align: center;
+        line-height: 0;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    &__wrapper.block {
+        width: 270px;
+        border-radius: 5px;
+        background-color: #FA6E3D;
+        padding: 5px 0;
+        text-align: center;
+        line-height: 0;
+        &:hover {
+            opacity: .8;
+        }
+        @media(max-width:750px) {
+            width: 100%;
+        }
+    }
+}

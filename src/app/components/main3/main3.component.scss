@@ -1,0 +1,28 @@
+.slicing-app-main {
+    display: flex;
+    &__wrapper {
+        height: 530px;
+        width: 100%;
+        background: url('./../../../assets//images/mainBg.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        @media(max-width: 350px) {
+            height: 410px;
+        }
+    }
+    &__background {
+        &--article {
+            font-size: 100px;
+            color: #ffffff;
+            font-family: proxima-extrabold;
+            margin: 0;
+            padding-left: 50px;
+            padding-top: 55px;
+            @media(max-width: 350px) {
+                font-size: 55px;
+                padding: 5%;
+            }
+        }
+    }
+}
